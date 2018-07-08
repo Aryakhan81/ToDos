@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4240DF8620F1180C0060FB1F /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4240DF8520F1180C0060FB1F /* CoreDataHelper.swift */; };
 		427C09F520EFDB8B0067D194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C09F420EFDB8B0067D194 /* AppDelegate.swift */; };
-		427C09F720EFDB8B0067D194 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C09F620EFDB8B0067D194 /* ViewController.swift */; };
+		427C09F720EFDB8B0067D194 /* ReminderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C09F620EFDB8B0067D194 /* ReminderTableViewController.swift */; };
 		427C09FA20EFDB8B0067D194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427C09F820EFDB8B0067D194 /* Main.storyboard */; };
 		427C09FD20EFDB8B0067D194 /* com_arya_gharib_todo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 427C09FB20EFDB8B0067D194 /* com_arya_gharib_todo.xcdatamodeld */; };
 		427C09FF20EFDB8C0067D194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 427C09FE20EFDB8C0067D194 /* Assets.xcassets */; };
 		427C0A0220EFDB8C0067D194 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 427C0A0020EFDB8C0067D194 /* LaunchScreen.storyboard */; };
+		427C0A0B20EFDDF00067D194 /* DisplayReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C0A0A20EFDDF00067D194 /* DisplayReminderViewController.swift */; };
+		427C0A0E20EFE09B0067D194 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427C0A0D20EFE09B0067D194 /* ReminderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4240DF8520F1180C0060FB1F /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		427C09F120EFDB8A0067D194 /* com.arya.gharib.todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = com.arya.gharib.todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		427C09F420EFDB8B0067D194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		427C09F620EFDB8B0067D194 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		427C09F620EFDB8B0067D194 /* ReminderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewController.swift; sourceTree = "<group>"; };
 		427C09F920EFDB8B0067D194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		427C09FC20EFDB8B0067D194 /* com_arya_gharib_todo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = com_arya_gharib_todo.xcdatamodel; sourceTree = "<group>"; };
 		427C09FE20EFDB8C0067D194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		427C0A0120EFDB8C0067D194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		427C0A0320EFDB8C0067D194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		427C0A0A20EFDDF00067D194 /* DisplayReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayReminderViewController.swift; sourceTree = "<group>"; };
+		427C0A0D20EFE09B0067D194 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4240DF8420F117E10060FB1F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4240DF8520F1180C0060FB1F /* CoreDataHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		427C09E820EFDB8A0067D194 = {
 			isa = PBXGroup;
 			children = (
@@ -56,8 +70,10 @@
 		427C09F320EFDB8A0067D194 /* com.arya.gharib.todo */ = {
 			isa = PBXGroup;
 			children = (
+				4240DF8420F117E10060FB1F /* Helpers */,
+				427C0A0C20EFDF640067D194 /* Views */,
+				427C0A0920EFDBE10067D194 /* Controllers */,
 				427C09F420EFDB8B0067D194 /* AppDelegate.swift */,
-				427C09F620EFDB8B0067D194 /* ViewController.swift */,
 				427C09F820EFDB8B0067D194 /* Main.storyboard */,
 				427C09FE20EFDB8C0067D194 /* Assets.xcassets */,
 				427C0A0020EFDB8C0067D194 /* LaunchScreen.storyboard */,
@@ -65,6 +81,23 @@
 				427C09FB20EFDB8B0067D194 /* com_arya_gharib_todo.xcdatamodeld */,
 			);
 			path = com.arya.gharib.todo;
+			sourceTree = "<group>";
+		};
+		427C0A0920EFDBE10067D194 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				427C09F620EFDB8B0067D194 /* ReminderTableViewController.swift */,
+				427C0A0A20EFDDF00067D194 /* DisplayReminderViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		427C0A0C20EFDF640067D194 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				427C0A0D20EFE09B0067D194 /* ReminderTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +171,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4240DF8620F1180C0060FB1F /* CoreDataHelper.swift in Sources */,
 				427C09FD20EFDB8B0067D194 /* com_arya_gharib_todo.xcdatamodeld in Sources */,
-				427C09F720EFDB8B0067D194 /* ViewController.swift in Sources */,
+				427C0A0B20EFDDF00067D194 /* DisplayReminderViewController.swift in Sources */,
+				427C09F720EFDB8B0067D194 /* ReminderTableViewController.swift in Sources */,
 				427C09F520EFDB8B0067D194 /* AppDelegate.swift in Sources */,
+				427C0A0E20EFE09B0067D194 /* ReminderTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6H4X3TMFL;
 				INFOPLIST_FILE = com.arya.gharib.todo/Info.plist;
@@ -291,8 +328,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arya.com-arya-gharib-todo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arya.gharib.ToDos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,6 +340,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6H4X3TMFL;
 				INFOPLIST_FILE = com.arya.gharib.todo/Info.plist;
@@ -309,8 +348,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arya.com-arya-gharib-todo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arya.gharib.ToDos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
