@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 class ReminderTableViewCell: UITableViewCell {
-    //Button action
-    var onButtonTouched: ((ReminderTableViewCell) -> Void)? = nil
-    @IBAction func completeButtonTapped(_ sender: Any) {
-        
-    }
     
-    //Labels on the cell
+    //Objects on the cell
     @IBOutlet weak var reminderTitle: UILabel!
     @IBOutlet weak var reminderTime: UILabel!
+    @IBOutlet weak var completeButton: UIButton!
     
+    weak var delegate: ReminderTableViewCellDelegate?
+    
+    @IBAction func tappedComplete(_ sender: UIButton) {
+    }
 }

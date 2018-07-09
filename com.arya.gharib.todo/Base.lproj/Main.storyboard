@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="32n-eW-rPe">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,13 +34,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="289.66666666666669" height="43.666666666666664"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSZ-nt-eaQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="289.66666666666669" height="21.666666666666668"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="289.66666666666669" height="22"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Jm-yz-aTJ">
-                                                            <rect key="frame" x="0.0" y="21.666666666666671" width="289.66666666666669" height="22"/>
+                                                            <rect key="frame" x="0.0" y="22" width="289.66666666666669" height="21.666666666666671"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -52,6 +52,7 @@
                                                     <state key="normal" title="Complete"/>
                                                     <connections>
                                                         <action selector="completeButtonTapped:" destination="E2O-0L-ckb" eventType="touchUpInside" id="Y4f-5b-99g"/>
+                                                        <action selector="tappedComplete:" destination="E2O-0L-ckb" eventType="touchUpInside" id="4Ji-st-jjT"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -68,6 +69,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="completeButton" destination="z6l-N2-dIR" id="nUp-tv-yGQ"/>
                                     <outlet property="reminderTime" destination="2Jm-yz-aTJ" id="UHj-lP-orR"/>
                                     <outlet property="reminderTitle" destination="eSZ-nt-eaQ" id="nnz-5F-O4f"/>
                                     <segue destination="s9h-Mn-NVh" kind="show" identifier="editReminder" id="4i8-69-zdU"/>
@@ -140,6 +142,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="conentText" destination="HEB-E9-PNh" id="ubT-Do-1cA"/>
+                        <outlet property="contentText" destination="HEB-E9-PNh" id="HgM-TP-eGy"/>
                         <outlet property="nameText" destination="A6f-gD-vYT" id="HzV-2q-8e0"/>
                     </connections>
                 </viewController>

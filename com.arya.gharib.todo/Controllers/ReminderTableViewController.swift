@@ -9,11 +9,19 @@
 import Foundation
 import UIKit
 
-class ReminderTableViewController: UITableViewController {
+class ReminderTableViewController: UITableViewController, ReminderTableViewCellDelegate {
+    
     var reminders = [Reminder](){
         didSet{
             tableView.reloadData()
         }
+    }
+    
+    func tappedComplete(_ sender: ReminderTableViewCell) {
+        guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
+        let reminder = reminders[tappedIndexPath.row]
+        CoreDataHelper.deleteReminder(reminder: reminder)
+        reminders = CoreDataHelper.retrieveReminders()
     }
 
     override func viewDidLoad() {
@@ -29,7 +37,7 @@ class ReminderTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reminderTableViewCell", for: indexPath) as! ReminderTableViewCell        
         let reminder = reminders[indexPath.row]
         cell.reminderTitle.text = reminder.name
-        cell.reminderTime.text = reminder.modificationDate?.convertToString() ?? "unknown"
+        cell.reminderTime.text = reminder.modificationDate?.description ?? "unknown"
         return cell
     }
     
