@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class ReminderTableViewController: UITableViewController, ReminderTableViewCellDelegate {
+class ReminderTableViewController: UITableViewController {
     
     var reminders = [Reminder](){
         didSet{
@@ -17,9 +17,10 @@ class ReminderTableViewController: UITableViewController, ReminderTableViewCellD
         }
     }
     
-    func tappedComplete(_ sender: ReminderTableViewCell) {
-        guard let tappedIndexPath = tableView.indexPath(for: sender) else { return }
-        let reminder = reminders[tappedIndexPath.row]
+    @objc func tappedComplete(_ sender: UIButton) {
+        let completeButton = sender
+        let reminder = reminders[completeButton.tag]
+        
         CoreDataHelper.deleteReminder(reminder: reminder)
         reminders = CoreDataHelper.retrieveReminders()
     }
@@ -34,11 +35,19 @@ class ReminderTableViewController: UITableViewController, ReminderTableViewCellD
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reminderTableViewCell", for: indexPath) as! ReminderTableViewCell        
-        let reminder = reminders[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reminderTableViewCell", for: indexPath) as! ReminderTableViewCell
+        
+        let reminder = self.reminders[indexPath.row]
         cell.reminderTitle.text = reminder.name
         cell.reminderTime.text = reminder.modificationDate?.description ?? "unknown"
+        cell.completeButton.tag = indexPath.row
+        cell.completeButton.addTarget(self, action: #selector(tappedComplete(_:)), for: .touchUpInside)
+//        cell.onButtonTapped = { (cell) in
+//            guard let newIndexPath = tableView.indexPath(for: cell) else { return }
+//
+//        }
         return cell
+        
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -16,8 +16,12 @@ class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var reminderTime: UILabel!
     @IBOutlet weak var completeButton: UIButton!
     
+    var onButtonTapped: ((ReminderTableViewCell) -> Void)? = nil
+    
     weak var delegate: ReminderTableViewCellDelegate?
     
     @IBAction func tappedComplete(_ sender: UIButton) {
+//        completeButton.isSelected = !completeButton.isSelected
+//        onButtonTapped?(self)
     }
 }

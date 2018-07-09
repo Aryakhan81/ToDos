@@ -24,8 +24,7 @@ class DisplayReminderViewController: UIViewController {
             nameText.text = reminder.name
             contentText.text = reminder.content
         } else {
-            nameText.text = "Untitled"
-            contentText.text = "Add a description of your reminder here..."
+            contentText.text = "Add a description of your reminder here..." 
         }
     }
     
@@ -46,7 +45,12 @@ class DisplayReminderViewController: UIViewController {
             CoreDataHelper.saveReminder()
             
         case "trash":
-            CoreDataHelper.deleteReminder(reminder: reminder!)
+            if let reminder = reminder {
+                CoreDataHelper.deleteReminder(reminder: reminder)
+            }
+            else {
+                return
+            }
         default:
             print("unexpected segue identifier")
         }

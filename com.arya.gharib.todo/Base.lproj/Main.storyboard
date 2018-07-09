@@ -50,10 +50,6 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z6l-N2-dIR">
                                                     <rect key="frame" x="289.66666666666669" y="0.0" width="124.33333333333331" height="43.666666666666664"/>
                                                     <state key="normal" title="Complete"/>
-                                                    <connections>
-                                                        <action selector="completeButtonTapped:" destination="E2O-0L-ckb" eventType="touchUpInside" id="Y4f-5b-99g"/>
-                                                        <action selector="tappedComplete:" destination="E2O-0L-ckb" eventType="touchUpInside" id="4Ji-st-jjT"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -101,7 +97,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6f-gD-vYT">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A6f-gD-vYT">
                                 <rect key="frame" x="15" y="76" width="384" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -141,7 +137,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="conentText" destination="HEB-E9-PNh" id="ubT-Do-1cA"/>
                         <outlet property="contentText" destination="HEB-E9-PNh" id="HgM-TP-eGy"/>
                         <outlet property="nameText" destination="A6f-gD-vYT" id="HzV-2q-8e0"/>
                     </connections>
